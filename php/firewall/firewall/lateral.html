@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<script language="JavaScript">
+var firewall_off = new Image();
+firewall_off.src = "imagens/menu_firewall_off.gif";
+var firewall_on = new Image();
+firewall_on.src = "imagens/menu_firewall_on.gif";
+
+var proxy_off = new Image();
+proxy_off.src = "imagens/menu_proxy_off.gif";
+var proxy_on = new Image();
+proxy_on.src = "imagens/menu_proxy_on.gif";
+
+var ids_off = new Image();
+ids_off.src = "imagens/menu_ids_off.gif";
+var ids_on = new Image();
+ids_on.src = "imagens/menu_ids_on.gif";
+
+var monitor_off = new Image();
+monitor_off.src = "imagens/menu_monitor_off.gif";
+var monitor_on = new Image();
+monitor_on.src = "imagens/menu_monitor_on.gif";
+
+var trafego_off = new Image();
+trafego_off.src = "imagens/menu_trafego_off.gif";
+var trafego_on = new Image();
+trafego_on.src = "imagens/menu_trafego_on.gif";
+
+var ifs_off = new Image();
+ifs_off.src = "imagens/menu_ifs_off.gif";
+var ifs_on = new Image();
+ifs_on.src = "imagens/menu_ifs_on.gif";
+
+
+function ativa(objeto)
+{
+	document.images[objeto].src = eval(objeto + "_on").src;
+	if ( parent.mainFrame.cad )
+	{
+		top.mainFrame.cad.hide_menu();	
+		parent.mainFrame.cad.show_menu(objeto);
+	} else
+	{
+		top.mainFrame.hide_menu();	
+		parent.mainFrame.show_menu(objeto);
+	}
+}
+
+function desativa(objeto)
+{
+	document.images[objeto].src = eval(objeto + "_off").src;
+}
+</script>
+</head>
+
+<body bgcolor="#737373" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="imagens/menufundo.gif">
+<table width="72" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><a target="mainFrame" href="firewall_main.php" onmouseover="ativa('firewall')" onmouseout="desativa('firewall')"><img name="firewall" src="imagens/menu_firewall_off.gif" width="134" height="17" border=0></a></td>
+  </tr>
+  <tr>
+    <td><a target="mainFrame" href="proxy_main.php" onmouseover="ativa('proxy')" onmouseout="desativa('proxy')"><img name="proxy" src="imagens/menu_proxy_off.gif" width="134" height="17" border=0></a></td>
+  </tr>
+  <tr>
+    <td><a target="mainFrame" href="ids_main.php" onmouseover="ativa('ids')" onmouseout="desativa('ids')"><img name="ids" src="imagens/menu_ids_off.gif" width="134" height="17" border=0></a></td>
+  </tr>
+  <tr>
+    <td><a target="mainFrame" href="monitor_main.php" onmouseover="ativa('monitor')" onmouseout="desativa('monitor')"><img name="monitor" src="imagens/menu_monitor_off.gif" width="134" height="17" border=0></a></td>
+  </tr>
+  <tr>
+    <td><a target="mainFrame" href="javascript: ativa('trafego');" onmouseover="ativa('trafego')" onmouseout="desativa('trafego')"><img name="trafego" src="imagens/menu_trafego_off.gif" width="134" height="17" border=0></a></td>
+  </tr>
+  <tr>
+    <td><a target="mainFrame" href="javascript: ativa('ifs');" onmouseover="ativa('ifs')" onmouseout="desativa('ifs')"><img name="ifs" src="imagens/menu_ifs_off.gif" width="134" height="17" border=0></a></td>
+  </tr>
+</table>
+</body>
+</html>

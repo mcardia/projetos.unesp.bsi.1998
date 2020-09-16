@@ -1,0 +1,36 @@
+#include<libpadrao.h>
+
+MYSQL mysql_conn;
+
+int db_connect(char *host, char *base, char *user, char *pass)
+{
+	mysql_init(&mysql_conn);
+	if ( !mysql_real_connect(&mysql_conn, host, user, pass, base, 0, NULL, 0) )
+	{
+		return(0);
+	}
+	return(1);
+}
+
+MYSQL_RES *db_query(char *str_sql)
+{
+	mysql_query(&mysql_conn, str_sql);
+	return ( mysql_store_result(&mysql_conn) );
+}
+
+MYSQL_ROW db_read( MYSQL_RES *query )
+{
+	return ( mysql_fetch_row(query) );
+}
+
+void db_close()
+{
+	mysql_close(&mysql_conn);
+}
+
+void db_free(MYSQL_RES *query)
+{
+	mysql_free_result(query);
+}
+
+

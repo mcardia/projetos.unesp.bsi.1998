@@ -1,0 +1,102 @@
+<style media="screen" type="text/css">
+	# aa {}
+	
+	#font_black   {color: #000000 ; font-family: verdana, arial; font-size:10pt; font-style:normal; font-weight: normal; text-decoration: none;}
+	#font_blue    {color: #0080c0 ; font-family: verdana, arial; font-size:10pt; font-style:normal; font-weight: normal; text-decoration: none;}
+	#font_red     {color: #ff0000 ; font-family: verdana, arial; font-size:10pt; font-style:normal; font-weight: normal; text-decoration: none;}	
+	#font_dica    {color: #000000 ; font-family: verdana, arial; font-size:08pt; font-style:italic; font-weight: normal; text-decoration: none;}
+	
+	#font_black_b {color: #000000 ; font-family: verdana, arial; font-size:10pt; font-style:normal; font-weight: bold; text-decoration: none;}
+	#font_blue_b  {color: #0080c0 ; font-family: verdana, arial; font-size:10pt; font-style:normal; font-weight: bold; text-decoration: none;}
+	#font_red_b   {color: #ff0000 ; font-family: verdana, arial; font-size:10pt; font-style:normal; font-weight: bold; text-decoration: none;}
+
+	#font_titulo  {color: #ff0000 ; font-family: verdana, arial; font-size:12pt; font-style:normal; font-weight: bold; text-decoration: none;}
+	
+	#tabela {
+		border        : 1px outset Black;
+		border-bottom : 1px outset Black;
+		border-left   : 1px outset Black;
+		border-right  : 1px outset Black;
+		border-top    : 1px outset Black;
+	}
+	
+	.Menu          {font-family: verdana; font-size: 08pt; color: #606060; text-decoration: none; font-weight: bold}
+	a:link.Menu    {color : #606060;}
+	a:visited.Menu {color : #606060;}
+	a:active.Menu  {text-decoration: none; color: #0080c0;}
+	a:hover.Menu   {text-decoration: none; color: #0080c0;}
+
+	.Link          {font-family: verdana; font-size: 08pt; color: #808080; text-decoration: none; font-weight: bold}
+	a:link.Link    {color : #808080;}
+	a:visited.Link {color : #808080;}
+	a:active.Link  {text-decoration: none; color: #0080c0;}
+	a:hover.Link   {text-decoration: none; color: #0080c0;}
+
+	.Main	{color: #0080c0 ; font-family: verdana, arial; font-size:10pt; font-style:normal; font-weight: bold; text-decoration: none;}
+	a:link.Main    {color : #0080c0;}
+	a:visited.Main {color : #0080c0;}
+	a:active.Main  {text-decoration: none; color: #0080c0;}
+	a:hover.Main   {text-decoration: underline; color: #0080c0;}
+	
+	.Text {
+		font-family: Tahoma,Verdana, Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		width: 200px;
+		height: 14pt;
+	}
+	
+	.DataText {
+		font-family: Tahoma,Verdana, Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		width: 100px;
+		height: 14pt;
+	}
+
+	.SmallText {
+		font-family: Tahoma,Verdana, Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		width: 50px;
+		height: 14pt;
+	}
+
+	.MediumText {
+		font-family: Tahoma,Verdana, Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		width: 75px;
+		height: 14pt;
+	}
+
+	.Submit {
+		font-family: Tahoma,Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		width: 50px;
+		height: 14pt;
+	}
+
+	.Estat {
+		font-family: Tahoma,Verdana, Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		width: 150px;
+		height: 14pt;
+	}
+	
+	.Button {
+		font-family: Tahoma,Verdana, Arial, Helvetica, sans-serif;
+		font-size: 10pt;
+		font-weight: bold;
+		width: 50px;
+		height: 14pt;
+	}
+
+	input.DataText, input.Text, input.MediumText, input.SmallText, input.Submit, input.Estat, input.Button, select.SmallText {
+		border: #000000;
+		border-style: solid;
+		border-top-width: 1px;
+		border-right-width: 1px;
+		border-bottom-width: 1px;
+		border-left-width: 1px;
+	}
+
+</style>

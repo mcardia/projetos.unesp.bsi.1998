@@ -1,0 +1,169 @@
+<script src="../include/dynlayer.js"></script>
+<script>
+is.ns = (document.layers)? true:false
+is.ie = (document.all)? true:false
+
+function show_menu(objeto)
+{
+	eval(objeto + ".show()");
+}
+
+function hide_menu()
+{
+	firewall.hide();
+	monitor.hide();
+	trafego.hide();
+	ifs.hide();
+	proxy.hide();
+	ids.hide();
+}
+
+function init() {
+    firewall = new DynLayer("menu_firewall");
+    firewall.hide();
+
+    monitor = new DynLayer("menu_monitoramento");
+    monitor.hide();
+
+    trafego = new DynLayer("menu_trafego");
+    trafego.hide();
+
+    ifs = new DynLayer("menu_interface");
+    ifs.hide();
+
+    proxy = new DynLayer("menu_proxy");
+    proxy.hide();
+
+    ids = new DynLayer("menu_ids");
+    ids.hide();
+}
+
+function ativa(td)
+{
+	td.bgColor="#939393";
+}
+function desativa(td)
+{
+	td.bgColor="#737373";
+}
+</script>
+
+<div id="menu_firewall" style="position:absolute; left:0; top:18; z-index:2; visibility: hidden"> 
+  <table cellpadding="0" cellspacing="0" border="0" bgcolor="#737373">
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../firewall_simp.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Configurações</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../firewall_advn.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Configurações Avançadas</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../firewall_nat.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Redirecionar Endereços</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../firewall_main.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Visualizar Regras</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../firewall_pais.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Controle dos pais</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="javascript: hide_menu()"><font style="color: #cc0033 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Fechar</font></a></td>
+     </tr>
+  </table>
+</div>
+
+<div id="menu_monitoramento" style="position:absolute; left:0px; top:0px; z-index:2; visibility: hidden"> 
+  <table cellspacing="0" cellpadding="0" bgcolor="#737373">
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../monitor/frame.php?link=www"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Web Servers</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../monitor/frame.php?link=base"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Database Servers</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../monitor/frame.php?link=mail"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Mail Servers</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../monitor/frame.php?link=proxy"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Proxy Servers</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../monitor/frame.php?link=ftp"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">FTP Servers</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../monitor/frame.php?link=outros"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Outros Servidores</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../monitor/frame.php?link=contato"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Contatos</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../monitor/frame.php?link=estat"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Estatísticas</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../agenda_main.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Agenda de testes</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="javascript: hide_menu()"><font style="color: #cc0033 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Fechar</font></a></td>
+     </tr>
+  </table>
+</div>
+
+<div id="menu_trafego" style="position:absolute; left:0px; top:89px; z-index:3; visibility: hidden"> 
+  <table cellspacing="0" cellpadding="0" bgcolor="#737373">
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../mrtg/labor.lan_eth0.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Interface 1</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../mrtg/labor.lan_eth1.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Interface 2</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../mrtg/labor.lan_eth2.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Interface 3</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="javascript: hide_menu()"><font style="color: #cc0033 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Fechar</font></a></td>
+     </tr>
+  </table>
+</div>
+
+<div id="menu_interface" style="position:absolute; left:0px; top:105px; z-index:4; visibility: hidden"> 
+  <table cellspacing="0" cellpadding="0" bgcolor="#737373">
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="../interfaces.php?eth0"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Interface 1</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="../interfaces.php?eth1"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Interface 2</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="../interfaces.php?eth2"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Interface 3</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="javascript: hide_menu()"><font style="color: #cc0033 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Fechar</font></a></td>
+     </tr>
+  </table>
+</div>
+
+<div id="menu_proxy" style="position:absolute; left:0px; top:37px; z-index:5; visibility: hidden"> 
+  <table cellspacing="0" cellpadding="0" bgcolor="#737373">
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../proxy_main.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Configuração</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../proxy_user.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Usuários</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="javascript: hide_menu()"><font style="color: #cc0033 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Fechar</font></a></td>
+     </tr>
+  </table>
+</div>
+
+<div id="menu_ids" style="position:absolute; left:0px; top:54px; z-index:6; visibility: hidden"> 
+  <table cellspacing="0" cellpadding="0" bgcolor="#737373">
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../ids.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Nova regra</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a target="_parent" href="../ids_main.php"><font style="color: #000000 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Configurações</font></a></td>
+     </tr>
+     <tr> 
+       <td height="17" onmouseover="ativa(this)" onmouseout="desativa(this)"><a href="javascript: hide_menu()"><font style="color: #cc0033 ; font-family: verdana, arial; font-size:10px; font-style:normal; font-weight: bold;">Fechar</font></a></td>
+     </tr>
+  </table>
+</div>
